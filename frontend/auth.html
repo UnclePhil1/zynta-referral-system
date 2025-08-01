@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zynta Referral System</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Zynta Refers</h2>
+      <div class="sample-users">
+        <div id="sampleUsersGrid" class="users-grid">
+          <div class="loading">Loading top referrers...</div>
+        </div>
+      </div>
+      <div class="auth-card">
+        <h1>Welcome to Zynta</h1>
+
+        <div class="auth-tabs">
+          <button class="tab-btn active" id="loginTab">Login</button>
+          <button class="tab-btn" id="registerTab">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="registerName">Full Name</label>
+            <input type="text" id="registerName" required />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="registerReferralCode">Referral Code (optional)</label>
+            <input
+              type="text"
+              id="registerReferralCode"
+              placeholder="e.g. A1B2C3"
+            />
+          </div>
+          <button type="submit" class="btn">Register</button>
+        </form>
+
+        <div id="authMessage" class="message"></div>
+      </div>
+    </div>
+
+    <script src="./public/js/auth.js"></script>
+    <script src="./public/js/landing.js"></script>
+  </body>
+</html>

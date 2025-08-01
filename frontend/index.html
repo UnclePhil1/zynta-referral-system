@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zynta Dashboard</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="profile-section">
+        <div class="profile-header">
+          <div class="avatar" id="userAvatar"></div>
+          <div class="profile-info">
+            <h2 id="userName"></h2>
+            <p id="userEmail"></p>
+          </div>
+          <button id="logoutBtn" class="btn btn-outline">Logout</button>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat-card">
+            <h3>Your Referral Code</h3>
+            <div class="referral-code-container">
+              <span id="userReferralCode" class="referral-code"></span>
+              <button id="copyCodeBtn" class="btn btn-small">Copy</button>
+            </div>
+          </div>
+          <div class="stat-card">
+            <h3>Total Referrals</h3>
+            <p id="totalReferrals" class="stat-value"></p>
+          </div>
+        </div>
+      </div>
+      <div class="leaderboard-section">
+        <h2>User Leaderboard</h2>
+        <div class="leaderboard-grid">
+          <div class="grid-header">
+            <span>Rank</span>
+            <span>Name</span>
+            <span>Email</span>
+            <span>Referrals</span>
+          </div>
+          <div id="leaderboardContent" class="grid-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>
