@@ -1,4 +1,8 @@
 {
-  "root": "public/",
-  "routes": { "/**": "index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/auth", "destination": "/auth.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
