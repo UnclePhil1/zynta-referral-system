@@ -1,10 +1,12 @@
+const API_BASE_URL = "https://zynta-referral-system.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
     loadSampleUsers();
 });
 
 async function loadSampleUsers() {
     try {
-        const response = await fetch('http://localhost:3000/api/sample-users');
+        const response = await fetch(`${API_BASE_URL}/api/sample-users`);
         const users = await response.json();
         
         if (!response.ok) {

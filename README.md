@@ -28,7 +28,7 @@ A referral system where users can generate a unique referral code, share it, and
 ### Installation
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/zynta-referral-system.git
+   git clone https://github.com/UnclePhil1/zynta-referral-system.git
 
    cd zyn-refer
 

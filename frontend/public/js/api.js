@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://zynta-referral-system.onrender.com"; 
+
 async function fetchWithAuth(url, options = {}) {
     const token = localStorage.getItem('authToken');
     
@@ -31,9 +33,24 @@ async function fetchWithAuth(url, options = {}) {
 }
 
 async function getProfile() {
-    return fetchWithAuth('http://localhost:3000/api/profile');
+    return fetchWithAuth(`${API_BASE_URL}/api/profile`); 
 }
 
 async function getAllUsers() {
-    return fetchWithAuth('http://localhost:3000/api/all-users');
+    return fetchWithAuth(`${API_BASE_URL}/api/all-users`);
+}
+
+async function registerUser(data) {
+    return fetchWithAuth(`${API_BASE_URL}/api/register`, {
+        method: 'POST',
+        body: JSON.stringify(data)
+    });
+}
+
+async function loginUser(data) {
+    return fetch(`${API_BASE_URL}/api/login`, { 
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
 }

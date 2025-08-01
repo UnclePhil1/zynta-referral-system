@@ -1,6 +1,8 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const token = localStorage.getItem("authToken");
   const userData = localStorage.getItem("userData");
+  const API_BASE_URL = "https://zynta-referral-system.onrender.com";
 
   if (!token || !userData) {
     window.location.href = "/auth.html";
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       '<div class="loading">Loading leaderboard...</div>';
 
     try {
-      const response = await fetch("http://localhost:3000/api/all-users", {
+      const response = await fetch(`${API_BASE_URL}/api/all-users`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -111,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function loadProfile() {
     try {
-      const response = await fetch("http://localhost:3000/api/profile", {
+      const response = await fetch(`${API_BASE_URL}/api/profile`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -134,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function logout() {
     try {
-      await fetch("http://localhost:3000/api/logout", {
+      await fetch(`${API_BASE_URL}/api/logout`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
